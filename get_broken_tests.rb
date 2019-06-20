@@ -66,7 +66,7 @@ log_file_paths.each do |uri|
   failed_specs_from_log(bk_fetch(uri), only_files: options[:files]).each do |test_failure|
     unless failed_so_far.include?(test_failure)
       if options[:short]
-        print " #{test_failure}"
+        print " '#{test_failure}'"
       else
         puts test_failure
       end
