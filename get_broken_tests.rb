@@ -120,6 +120,10 @@ opt_parser = OptionParser.new do |opts|
     options[:bash] = o
   end
 
+  opts.on('-B', '--no-bash', 'Do not shorten for bash') do |o|
+    options[:bash] = o # surprisingly, `o` is false here...perhaps optsparse is being smart?
+  end
+
   opts.on('-s', '--short', 'Shorten output for rspec') do |o|
     options[:short] = o
   end
